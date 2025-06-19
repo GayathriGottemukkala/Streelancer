@@ -74,6 +74,7 @@ border-top-left-radius: 30px; ul{
   font-size: var(--parafont);
   line-height: 1.4;
   margin-bottom: 151px;
+  list-style-type: disclosure-closed;
 }
 .learn-button {
   margin-top: 20px;
@@ -442,10 +443,15 @@ font-size: 14px;
 
 .silver-card {
   background-color: #8d8e94;
+ 
   .subhead{
     color: #6C757D;
   }
 }
+
+
+
+
 .blue-card {
   background-color: #336B87;
   .subhead{
@@ -510,7 +516,7 @@ font-weight: bold;
 .register-btn {
   margin-top: 20px;
   padding: 10px 16px;
-  background-color: FFF0E8;
+  background-color: #FFF0E8;
   color: var(--primarycolor);
   border: none;
   font-weight: bold;
@@ -520,11 +526,21 @@ font-weight: bold;
   font-size: var(--btnfont);
 }
 
-.register-btn:hover {
-  background-color: #FFD2C4;
- 
+.returnee-card .register-btn:hover{
+background-color: #FFD2C4;
 }
-
+.silver-card .register-btn:hover{
+background-color: #B0B6BC;
+}
+.blue-card .register-btn:hover{
+background-color: #5096B8;
+}
+.yellow-card .register-btn:hover{
+background-color: #DCC67E;
+}
+.green-card .register-btn:hover{
+background-color: #FFD2C4;
+}
 
 
 .btn-wrapper {
@@ -656,7 +672,7 @@ text-align: left;
 .employer-box {
   background-color: #FFF6F1;
   padding: 30px;
-  width: 350px;
+  width: 360px;
   text-align: left;
   box-shadow: 0 0 10px rgba(0,0,0,0.08);
 }

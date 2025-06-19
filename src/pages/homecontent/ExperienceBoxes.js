@@ -83,7 +83,8 @@ function CareerPathCards() {
           </div>
           <img src={ex4} alt="Silver Generation" className="card-image" />
         </div>
-       
+     
+
        {/* card 5 */}
         <div className="card green-card">
             <img src={ex5} alt="Silver Generation" className="card-image" />

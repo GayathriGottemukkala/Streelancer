@@ -20,9 +20,9 @@ function HeroServices() {
       <div className="services-grid">
        
         <ServiceCard
-          title="Remote"
+          title="Academy"
           className="bluecard"
-          subtitle="Women Workforce"
+          subtitle="Learn New Skills"
           points={[
             "Industry-relevant courses for women, queer professionals, returnees, and the silver generation.",
             "Hands-on learning, live mentorship, real-world projects, and certifications."
