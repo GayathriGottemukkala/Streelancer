@@ -7,6 +7,7 @@
   --secondaryfont:17px;
   --verysmallestfont:15px;
   --smallbg:#FFF7F2;
+  --lightpurcolor:#5C0090;
 
   --mainheadfont: clamp(1.2rem, 2.5vw, 2rem);
   --subheadfont: clamp(0.9rem, 2vw, 1.3rem);

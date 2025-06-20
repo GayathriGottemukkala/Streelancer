@@ -1,5 +1,11 @@
 import { useState } from "react";
 import "./RegistrationPage.css";
+import Personalcard from "./formcards/personalcard";
+import ProfessionalBackgroundCard from "./formcards/professionalcard";
+import WorkTrackPreferences from "./formcards/trackcard";
+import AvailabilityResources from "./formcards/Aviliablecard";
+import PortfolioWorkSamples from "./formcards/portfolio";
+import AlmostDone from "./formcards/Almost";
 
 const steps = [
   "Personal",
@@ -30,6 +36,8 @@ function RegistrationPage() {
   };
 
   return (
+    <div className="register-bg-container">
+     
     <div className="register-container">
       <h1 className="register-title">Join Streelancer</h1>
       <p className="register-subtitle">
@@ -84,6 +92,8 @@ function RegistrationPage() {
         )}
       </div>
     </div>
+    
+    </div>
   );
 }
 
@@ -91,33 +101,18 @@ function renderStepContent(step) {
   switch (step) {
     case 0:
       return (
-        <div className="register-form-grid">
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
-          <input type="email" placeholder="Email Address" />
-          <input type="tel" placeholder="Phone Number" />
-          <select>
-            <option>Select Gender</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-          </select>
-          <label className="register-checkbox-group">
-            <input type="checkbox" /> I've taken a career break of 6+ months
-          </label>
-          <input type="text" placeholder="Country" />
-        </div>
+       <div><Personalcard/></div>
       );
     case 1:
-      return <div>Background Step Content...</div>;
+      return <div><ProfessionalBackgroundCard/></div>;
     case 2:
-      return <div>Work Track Step Content...</div>;
+      return <div><WorkTrackPreferences/></div>;
     case 3:
-      return <div>Availability Step Content...</div>;
+      return <div><AvailabilityResources/></div>;
     case 4:
-      return <div>Portfolio Step Content...</div>;
+      return <div><PortfolioWorkSamples/></div>;
     case 5:
-      return <div>✅ Complete! Please review your details and submit.</div>;
+      return <div><AlmostDone/></div>;
     default:
       return null;
   }

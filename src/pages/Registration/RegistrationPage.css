@@ -1,10 +1,15 @@
-
-
+.register-bg-container{ /* fallback or overlay color */
+  background-image: url('../../images/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay; /* or multiply, screen, darken, lighten etc. */
+ }
 .register-container {
    width: clamp(320px, 80%, 900px);
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  
 }
 
 .register-title {
@@ -17,7 +22,6 @@
   color: var(--parafont);
   margin-bottom: 30px;
 }
-
 /* Step Container with Line */
 .register-steps-container {
   position: relative;
@@ -43,7 +47,7 @@
   top: 17px;
   left: 0;
   height: 8px;
-  background-color: #5C0090;
+  background-color: var(--lightpurcolor);
   z-index: 1;
   border-radius: 14px;
   transition: width 0.3s ease;
@@ -74,10 +78,9 @@
 }
 
 .register-step-circle.active ,.register-step-circle.completed  {
-  background-color: #5C0090;
+  background-color: var(--lightpurcolor);
   color: #FFF4F4;
 }
-
 
 .register-step-label {
   margin-top: 5px;
@@ -86,10 +89,9 @@
 
 
 
-
-
+/* registration form content */
 .register-form-content {
-  background-color: #fff;
+
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -162,11 +164,6 @@
 
   color: var(--primarycolor);
 }
-
-/* .register-back-btn:hover {
-  background-color: #777;
-} */
-
 .register-submit-btn {
   background-color: #28a745;
   color: #fff;

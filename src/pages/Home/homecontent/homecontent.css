@@ -201,7 +201,7 @@ width:80%;
 .community-text h2 {
 font-size: 18px;
   margin-bottom: 1rem;
-  color: #5C0090;
+  color: var(--lightpurcolor);
 }
 
 .community-text p {
@@ -328,7 +328,7 @@ font-size: 14px;
 
 .footer-logo p {
   font-size: 0.9rem;
-  color: #5C0090;
+  color: var(--lightpurcolor);
   margin-top: 0px;
 }
 
@@ -359,12 +359,12 @@ font-size: 14px;
 
 .footer-links li {
   margin-bottom: 6px;
-  color: #5C0090;
+  color: var(--lightpurcolor);
   font-size: 0.9rem;
   
 }
 .para{
-    color: #5C0090;
+    color: var(--lightpurcolor);
   }
 .footer-links form {
   display: flex;
@@ -392,7 +392,7 @@ font-size: 14px;
 
 .privacy-text {
   font-size: 0.7rem;
- color: #5C0090;
+ color: var(--lightpurcolor);
   margin-top: 5px;
 }
 
@@ -641,7 +641,7 @@ text-align: left;
 
 .step-title {
   font-size: var(--subheadfont);
-  color: #5C0090;
+  color: var(--lightpurcolor);
   margin-bottom: 8px;
 }
 
