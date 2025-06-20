@@ -3,10 +3,10 @@ import React from 'react';
 import './homecontent.css';
 import ServiceCard from './herocard';
 
-import img1 from "../../images/side1.png"
-import img2 from "../../images/side2.png"
-import img3 from "../../images/side3.png"
-import img4 from "../../images/side4.png"
+import img1 from "../../../images/side1.png"
+import img2 from "../../../images/side2.png"
+import img3 from "../../../images/side3.png"
+import img4 from "../../../images/side4.png"
 
 
 function HeroServices() {

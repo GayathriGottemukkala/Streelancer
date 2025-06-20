@@ -4,14 +4,15 @@
 import { HiOutlineUserAdd, HiOutlineBookOpen, HiOutlineBriefcase } from 'react-icons/hi';
 import { LuRoute } from 'react-icons/lu'; // Clean outlined route icon
 
-import ic1 from "../../images/ic1.png"
-import ic2 from "../../images/ic2.png"
-import ic3 from "../../images/ic3.png"
-import ic4 from "../../images/ic4.png"
-import num1 from "../../images/num1.png"
-import num2 from "../../images/num2.png"
-import num3 from "../../images/num3.png"
-import num4 from "../../images/num4.png"
+import ic1 from "../../../images/ic1.png"
+import ic2 from "../../../images/ic2.png"
+import ic3 from "../../../images/ic3.png"
+import ic4 from "../../../images/ic4.png"
+import num1 from "../../../images/num1.png"
+import num2 from "../../../images/num2.png"
+import num3 from "../../../images/num3.png"
+import num4 from "../../../images/num4.png"
+
 
 const stepIcons = [ic1,ic2,ic3,ic4
 
@@ -87,11 +88,11 @@ const StreelancerSteps = () => {
           <h3>Be a part of Streelancer.</h3>
           <ul>
             <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-  <img src={require("../../images/message.png")} alt="icon" style={{ width: "30px", height: "30px" }} />
+  <img src={require("../../../images/message.png")} alt="icon" style={{ width: "30px", height: "30px" }} />
   <span><b>24x7</b> <br/>Support</span>
 </li>
             <li style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-  <img src={require("../../images/verified.png")} alt="icon" style={{ width: "30px", height: "30px" }} />
+  <img src={require("../../../images/verified.png")} alt="icon" style={{ width: "30px", height: "30px" }} />
   <span><b>Verified</b> <br/>Talent</span>
 </li>
           
@@ -99,7 +100,7 @@ const StreelancerSteps = () => {
           <button className="hire-btn">Hire Now</button>
 
           <img
-    src={require("../../images/people.png")}
+    src={require("../../../images/people.png")}
     alt="Decorative Bottom Image"
   className='people-img'
   />

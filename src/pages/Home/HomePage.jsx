@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./home.css";
-import womanLaptop from "../images/girl.png";
+import womanLaptop from "../../images/girl.png";
 
 import HeroServices from "./homecontent/HeroServices";
 import CommunityBanner from "./homecontent/CommunityBanner";
@@ -8,7 +8,7 @@ import ExperienceBoxes from "./homecontent/ExperienceBoxes";
 import StreelancerSteps from "./homecontent/stepscontent";
 import { useNavigate } from "react-router-dom";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import done from "../images/done.png"
+import done from "../../images/done.png"
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ const HomePage = () => {
       {/* Navbar */}
       <nav className="navbar">
         <div className="logo">
-          <img src={require("../images/logo.png")} alt="Streelancer Logo" />
+          <img src={require("../../images/logo.png")} alt="Streelancer Logo" />
         </div>
 
         <ul className={`nav-links ${menuOpen ? "open" : "close"}`}>
@@ -86,16 +86,16 @@ const HomePage = () => {
       <section className="hero">
         <div className="hero-text">
           <div>
-          <h1>Restart. Rise. Thrive.</h1>
+          <h1>Hire. Train. Empower.</h1>
           <p>India's largest women-first platform for inclusive career building.</p>
           <div className="hero-buttons">
             <button className="btn-primary">Register Now</button>
             <button className="btn-primary btn-outline ">Join Academy</button>
           </div>
           <ul className="features">
-            <li><span><img src={done}/></span> Smart onboarding that routes you to the right path</li>
-            <li><span><img src={done}/></span> Access verified, DEI-aligned professionals instantly</li>
-            <li><img src={done}/> Industry-vetted programs with mentorship</li>
+            <li><span><img src={done}/></span>DEI-aligned, work-from-home talent</li>
+            <li><span><img src={done}/></span>Vetted profiles, ready to get hired</li>
+            <li><img src={done}/>Courses + mentorship for career returnees</li>
           </ul>
         </div>
         </div>

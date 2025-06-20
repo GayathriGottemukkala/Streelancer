@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './auth.css';
 
-const RegisterPage = () => {
+const Signup = () => {
   return (
     <div className="auth-container">
       <div className="auth-box">
@@ -22,4 +22,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default Signup;

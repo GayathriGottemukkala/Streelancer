@@ -5,7 +5,7 @@ function CommunityBanner() {
     <section className="community-section">
 
       <div className="community-container">
-  <img src={require("../../images/community.png")} alt="Community" className="community-image" />
+  <img src={require("../../../images/community.png")} alt="Community" className="community-image" />
   
   <div className="community-text">
     <h2>Join Streelancer Community!</h2>
@@ -21,7 +21,7 @@ function CommunityBanner() {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-logo">
-          <img src={require("../../images/logo.png")}/>
+          <img src={require("../../../images/logo.png")}/>
           <p>India’s largest women-first platform for inclusive career building.</p>
           <div className="social-icons">
             <i className="fab fa-linkedin"></i>

@@ -1,10 +1,12 @@
 
 
-import returneeImg from "../../images/ex1.png"; // update path
-import silverImg from "../../images/ex2.png"; 
-import ex3 from "../../images/ex3.png"; // update path
-import ex4 from "../../images/ex4.png";
-import ex5 from "../../images/ex5.png"; // update path
+import returneeImg from "../../../images/ex1.png"; // update path
+import silverImg from "../../../images/ex2.png"; 
+import ex3 from "../../../images/ex3.png"; // update path
+import ex4 from "../../../images/ex4.png";
+import ex5 from "../../../images/ex5.png"; 
+import line from "../../../images/line.png"
+import line2 from "../../../images/line2.png"// update path
 // update path
 
 function CareerPathCards() {
@@ -29,7 +31,7 @@ function CareerPathCards() {
            
             <div className="btn-wrapper">
   <button className="register-btn">Register Now</button>
-  <img src={require("../../images/line.png")} alt="arrow" className="arrow-image left" />
+  <img src={line} alt="arrow" className="arrow-image left" />
 </div>
 
           </div>
@@ -45,7 +47,7 @@ function CareerPathCards() {
             </p>
                         <div className="btn-wrapper" >
   <button className="register-btn">Register Now</button>
-  <img src={require("../../images/line2.png")} alt="arrow" className="arrow-image right" />
+  <img src={line2} alt="arrow" className="arrow-image right" />
 </div>
           </div>
           <img src={silverImg} alt="Silver Generation" className="card-image" />
@@ -61,8 +63,8 @@ function CareerPathCards() {
               Find projects in inclusive, safe spaces. We partner with diversity-first employers and offer creative, technical, and client-facing roles with full respect for identity.
             </p>
                           <div className="btn-wrapper">
-  <button className="register-btn">Register Now</button>
-  <img src={require("../../images/line.png")} alt="arrow" className="arrow-image left" />
+  <button className="register-btn" >Register Now</button>
+  <img src={line} alt="arrow" className="arrow-image left" />
 </div>
           </div>
           
@@ -78,7 +80,7 @@ function CareerPathCards() {
             </p>
                         <div className="btn-wrapper" >
   <button className="register-btn">Register Now</button>
-  <img src={require("../../images/line2.png")} alt="arrow" className="arrow-image right" />
+  <img src={line2} alt="arrow" className="arrow-image right" />
 </div>
           </div>
           <img src={ex4} alt="Silver Generation" className="card-image" />
@@ -99,7 +101,7 @@ Access remote jobs that focus on what you can do, not what you can't. Work comfo
             </p>
                            <div className="btn-wrapper">
   <button className="register-btn">Register Now</button>
-  <img src={require("../../images/line.png")} alt="arrow" className="arrow-image left" />
+  <img src={line} alt="arrow" className="arrow-image left" />
 </div>
           </div>
           
