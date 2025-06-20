@@ -11,7 +11,7 @@
   --mainheadfont: clamp(1.2rem, 2.5vw, 2rem);
   --subheadfont: clamp(0.9rem, 2vw, 1.3rem);
   --parafont: clamp(0.85rem, 1.8vw, 1.1rem);
-  --smallparafont: clamp(0.75rem, 1vw, 1rem);
+  --smallparafont: clamp(0.65rem, 1vw, 1rem);
   --btnfont: clamp(0.9rem, 2vw, 1.1rem);
 
 }

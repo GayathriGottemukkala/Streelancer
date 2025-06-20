@@ -75,7 +75,7 @@ function RegistrationPage() {
         )}
         {currentStep === steps.length - 1 ? (
           <button className="register-submit-btn" onClick={handleSubmit}>
-            Submit
+            Complete Registration
           </button>
         ) : (
           <button className="register-continue-btn" onClick={handleNext}>

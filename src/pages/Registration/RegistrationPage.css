@@ -33,7 +33,7 @@
   left: 0;
   right: 0;
   height: 8px;
-  background-color: #ccc;
+  background-color: #D5C5DE;
   z-index: 0;
   border-radius: 14px;
 }
@@ -63,8 +63,8 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: #ccc;
-  color: #fff;
+  background-color: #D5C5DE;
+  color: var(--primarycolor);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,17 +73,15 @@
   transition: background-color 0.3s;
 }
 
-.register-step-circle.active {
+.register-step-circle.active ,.register-step-circle.completed  {
   background-color: #5C0090;
+  color: #FFF4F4;
 }
 
-.register-step-circle.completed {
-  background-color: #5C0090;
-}
 
 .register-step-label {
   margin-top: 5px;
-  font-size: var(--parafont);
+  font-size: var(--smallparafont);
 }
 
 
@@ -130,7 +128,7 @@
 
 .register-button-group {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 10px;
 }
 
@@ -142,10 +140,15 @@
   border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
+
+}
+.register-continue-btn,
+
+.register-submit-btn {  margin-left: auto;
 }
 
 .register-continue-btn {
-  background-color: #5e239d;
+  background-color: var(--primarycolor);
   color: #fff;
 }
 
@@ -154,13 +157,15 @@
 }
 
 .register-back-btn {
-  background-color: #999;
-  color: #fff;
+  background-color: transparent;
+  border: solid 2px var(--primarycolor);
+
+  color: var(--primarycolor);
 }
 
-.register-back-btn:hover {
+/* .register-back-btn:hover {
   background-color: #777;
-}
+} */
 
 .register-submit-btn {
   background-color: #28a745;
