@@ -1,5 +1,6 @@
 
 
+import { useNavigate } from "react-router-dom";
 import returneeImg from "../../../images/ex1.png"; // update path
 import silverImg from "../../../images/ex2.png"; 
 import ex3 from "../../../images/ex3.png"; // update path
@@ -10,6 +11,7 @@ import line2 from "../../../images/line2.png"// update path
 // update path
 
 function CareerPathCards() {
+    const navigate = useNavigate();
   return (
     <section className="career-section">
       <h2 className="section-title">Find Your Fit, Your Way</h2>
@@ -30,7 +32,7 @@ function CareerPathCards() {
             </p>
            
             <div className="btn-wrapper">
-  <button className="register-btn">Register Now</button>
+  <button className="register-btn" onClick={() => navigate("/Registration")}>Register Now</button>
   <img src={line} alt="arrow" className="arrow-image left" />
 </div>
 
@@ -46,7 +48,7 @@ function CareerPathCards() {
               Your experience is your power. We help you explore remote roles that value wisdom, patience, and professionalism—no steep learning curves, just real contributions.
             </p>
                         <div className="btn-wrapper" >
-  <button className="register-btn">Register Now</button>
+  <button className="register-btn" onClick={() => navigate("/Registration")}>Register Now</button>
   <img src={line2} alt="arrow" className="arrow-image right" />
 </div>
           </div>
@@ -63,7 +65,7 @@ function CareerPathCards() {
               Find projects in inclusive, safe spaces. We partner with diversity-first employers and offer creative, technical, and client-facing roles with full respect for identity.
             </p>
                           <div className="btn-wrapper">
-  <button className="register-btn" >Register Now</button>
+  <button className="register-btn" onClick={() => navigate("/Registration")}>Register Now</button>
   <img src={line} alt="arrow" className="arrow-image left" />
 </div>
           </div>
@@ -79,7 +81,7 @@ function CareerPathCards() {
               Kickstart your journey in the gig economy. Gain experience, earn on the side, and build your professional portfolio through beginner-friendly freelance roles.
             </p>
                         <div className="btn-wrapper" >
-  <button className="register-btn">Register Now</button>
+  <button className="register-btn" onClick={() => navigate("/Registration")}>Register Now</button>
   <img src={line2} alt="arrow" className="arrow-image right" />
 </div>
           </div>
@@ -100,7 +102,7 @@ Access remote jobs that focus on what you can do, not what you can't. Work comfo
 
             </p>
                            <div className="btn-wrapper">
-  <button className="register-btn">Register Now</button>
+  <button className="register-btn" onClick={() => navigate("/Registration")}>Register Now</button>
   <img src={line} alt="arrow" className="arrow-image left" />
 </div>
           </div>
