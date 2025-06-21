@@ -162,12 +162,12 @@ font-weight: bold;
 }
 
 .work-track strong {
-font-size: var(--btnfont);
+font-size: var(--parafont);
 }
 
 .work-track p {
   margin: 0.25rem 0 0;
-font-size: var(--parafont);
+font-size: var(--smallparafont);
 }
 
 .experience-levels {
@@ -287,23 +287,19 @@ font-size: var(--parafont);
 
 
 /* portfoliocard */
-.portfolio-container {
-  max-width: 750px;
-  margin: auto;
-  font-family: Arial, sans-serif;
-  color: #4b2e83;
-}
+
 
 h2 {
   margin-bottom: 1.5rem;
+  font-size: var(--subheadfont);
 }
 
 .upload-box {
-  border: 2px dashed #b88de9;
+  border: 2px dashed var(--lightpurcolor);
   border-radius: 10px;
   padding: 30px;
   text-align: center;
-  background-color: #faf5ff;
+ 
   margin-bottom: 20px;
   position: relative;
 }
@@ -311,13 +307,13 @@ h2 {
 .upload-label {
   cursor: pointer;
   display: block;
-  color: #4b2e83;
+
 }
 
 .upload-icon {
   font-size: 2rem;
-  background-color: #d1a9ff;
-  color: white;
+  background-color: #D3B5FF;
+  color: var(--primarycolor);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -325,6 +321,9 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.upload-icon img{
+  width: 19px;
 }
 
 .upload-box input[type="file"] {
@@ -344,15 +343,22 @@ h2 {
 .input-group label {
   display: flex;
   align-items: center;
-  border: 1px solid #b88de9;
+  border: 1px solid var(--lightpurcolor);
   border-radius: 6px;
   padding: 10px;
-  background: #fff;
+ 
 }
 
 .input-group .icon {
   margin-right: 10px;
   font-size: 1.2rem;
+}
+.icon img{
+  width: 22px;
+}
+.icon i{
+  background-color:  var(--lightpurcolor);
+  color: #BD94F9;
 }
 
 .input-group input {
@@ -360,7 +366,7 @@ h2 {
   outline: none;
   flex: 1;
   font-size: 1rem;
-  color: #4b2e83;
+color: #B994F1;
   background: transparent;
 }
 
@@ -377,10 +383,14 @@ h2 {
   font-size: 0.85rem;
   color: #8b7eaa;
 }
+.side-head{
+  font-size: var(--parafont);
+  color: var(--primarycolor);
+}
 
 .hint {
-  font-size: 0.85rem;
-  color: #a989cc;
+  font-size: var(--smallparafont);
+  color: #B994F1;
   margin-bottom: 10px;
 }
 
@@ -393,73 +403,55 @@ h2 {
 .sample-box {
   flex: 1;
   height: 130px;
-  border: 2px dashed #b88de9;
+  border: 2px dashed var(--lightpurcolor);
   border-radius: 10px;
-  background-color: #faf5ff;
+ 
   text-align: center;
   padding: 20px;
   cursor: pointer;
 }
 
-.plus {
-  display: inline-block;
-  background: #b88de9;
-  color: white;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  margin-bottom: 8px;
-}
+
 
 textarea {
   width: 100%;
   height: 100px;
-  border: 1px solid #b88de9;
+  border: 1px solid var(--lightpurcolor);
   border-radius: 6px;
   padding: 10px;
-  font-size: 1rem;
-  color: #4b2e83;
-  background-color: #f9f5ff;
+  font-size: var(--smallparafont);
+  color: var(--primarycolor);
+background-color: transparent;
   resize: vertical;
 }
 
 /* Amostdonecard */
 
-.almost-done-container {
-  max-width: 700px;
-  margin: auto;
-  font-family: Arial, sans-serif;
-  color: #4b2e83;
-  padding: 20px;
+.almost-done-container{
+  font-size: var(--parafont);
 }
 
 h2 a {
-  text-decoration: underline;
-  color: #6f2dbd;
+color: #62208F;
+font-size: var(--subheadfont);
+text-decoration: none;
 }
 
 .field-block {
   margin-bottom: 20px;
 }
 
+
 .field-label {
-  font-weight: bold;
   display: block;
-  margin-bottom: 8px;
-  color: #4b2e83;
+  margin-bottom: 18px;
+ 
 }
 
-.toggle-block {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 
 .toggle-text {
-  color: #4b2e83;
-  font-size: 0.95rem;
+  color: var(--lightpurcolor);
+
 }
 
 .toggle-switch {
@@ -467,6 +459,7 @@ h2 a {
   display: inline-block;
   width: 50px;
   height: 25px;
+      margin-right: 13px;
 }
 
 .toggle-switch input {
@@ -507,24 +500,20 @@ input:checked + .slider:before {
 .checkbox-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 18px;
 }
 
-.checkbox-group label {
-  font-size: 0.95rem;
-  color: #4b2e83;
-}
 
 .checkbox-group input {
   margin-right: 8px;
 }
 
 .info-box {
-  background-color: #e8d9fa;
+  background-color: #d3b5ff52;
   border-radius: 10px;
   padding: 15px 20px;
   margin-bottom: 20px;
-  color: #4b2e83;
+  color: var(--primarycolor);
 }
 
 .info-box ul {
@@ -533,7 +522,7 @@ input:checked + .slider:before {
 }
 
 .terms-block {
-  font-size: 0.9rem;
+  
   color: #4b2e83;
 }
 
@@ -541,7 +530,4 @@ input:checked + .slider:before {
   margin-right: 8px;
 }
 
-.terms-block a {
-  color: #6f2dbd;
-  text-decoration: underline;
-}
+

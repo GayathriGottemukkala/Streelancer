@@ -25,7 +25,7 @@ export default function AvailabilityResources() {
       <h2>Availability & Resources</h2>
 
       <div className="section">
-        <h3>Work Availability</h3>
+        <p>Work Availability</p>
         <div className="options-grid">
           <label className={`option ${workAvailability === "full" ? "selected" : ""}`}>
             <input

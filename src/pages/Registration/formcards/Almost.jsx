@@ -83,7 +83,7 @@ export default function AlmostDone() {
       <div className="info-box">
         <strong>Notification Preferences</strong>
         <p>Based on your profile, you'll be automatically matched with:</p>
-        <ul>
+        <ul className="checkbox-group">
           <li>Job opportunities that match your skills and preferences</li>
           <li>Relevant training courses in our Academy if needed</li>
           <li>Community resources and networking events</li>

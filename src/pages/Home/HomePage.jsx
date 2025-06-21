@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./home.css";
 import womanLaptop from "../../images/girl.png";
 
@@ -6,13 +6,18 @@ import HeroServices from "./homecontent/HeroServices";
 import CommunityBanner from "./homecontent/CommunityBanner";
 import ExperienceBoxes from "./homecontent/ExperienceBoxes";
 import StreelancerSteps from "./homecontent/stepscontent";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import done from "../../images/done.png"
 
 const HomePage = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+   const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname]);
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
