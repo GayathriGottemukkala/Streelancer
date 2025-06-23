@@ -1,24 +1,42 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './auth.css';
+import React from "react";
+import { FaGoogle, FaFacebook, FaLinkedin } from "react-icons/fa";
+import "./auth.css";
+import { useNavigate } from "react-router-dom";
 
-const LoginPage = () => {
+const Login = () => {
+  const navigate=useNavigate()
   return (
-    <div className="auth-container">
-      <div className="auth-box">
-        <h2>Welcome Back 👋</h2>
-        <p>Please log in to your account</p>
-        <form>
-          <input type="email" placeholder="Email address" required />
-          <input type="password" placeholder="Password" required />
-          <button type="submit">Login</button>
-        </form>
-        <p className="auth-switch">
-          Don't have an account? <Link to="/register">Sign up</Link>
+    <div className="login-container">
+      <div className="login-box">
+        <h2 className="login-title">Welcome back!</h2>
+        <p className="login-subtitle">
+          Let’s get you closer to the work-life you deserve.
         </p>
+
+        <div className="login-card">
+          <form className="signup-form">
+            <input type="text" placeholder="Full name" />
+            <input type="password" placeholder="Password" />
+            <div className="forgot-password">Forgot Password?</div>
+            <button className="signup-button">Login</button>
+          </form>
+
+          <div className="divider">or</div>
+
+          <div className="auth-social-icons">
+            <FaGoogle />
+            <FaFacebook />
+            <FaLinkedin />
+          </div>
+
+          <p className="signin-text">
+            Don’t have an account? <a onClick={() => navigate("/signup")}>Sign up</a>
+          </p>
+          
+        </div>
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default Login;

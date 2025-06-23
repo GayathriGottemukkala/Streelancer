@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+ // Important for JS components like Carousel
+
 import HomePage from "./pages/Home/HomePage";
 
 import LoginPage from "./pages/Auth/LoginPage";

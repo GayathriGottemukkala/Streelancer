@@ -24,7 +24,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="container">
+    <div className="hero-container">
       {/* Navbar */}
       <nav className="navbar">
         <div className="logo">
@@ -39,7 +39,7 @@ const HomePage = () => {
           <li onClick={() => setMenuOpen(false)}>Why Us</li>
           <li onClick={() => setMenuOpen(false)}>Community</li></>
          
-          <li onClick={() => setMenuOpen(false)}> <button className=" btn-clear" onClick={() => navigate("/register")}>
+          <li onClick={() => setMenuOpen(false)}> <button className=" btn-clear" onClick={() => navigate("/Signup")}>
             Sign up
           </button></li>
           <li onClick={() => setMenuOpen(false)}>  <button className=" btn-clear2" onClick={() => navigate("/login")}>

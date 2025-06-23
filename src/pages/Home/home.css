@@ -30,7 +30,7 @@ font-family: 'Roboto', sans-serif;
   background-color:  var(--bgcolor);
 }
 
-.container {
+.hero-container {
   width: 100%;
   background-color: #fdf2ee;
 }
