@@ -56,8 +56,8 @@ const StreelancerSteps = () => {
         ))}
       </div>
 
-      {/* Divider */}
-      <div className="divider">
+      {/* home-divider */}
+      <div className="home-divider">
         <h2>Find The Right Person For The Job</h2>
         <p>Pre-vetted, DEI-aligned remote talent</p>
       </div>

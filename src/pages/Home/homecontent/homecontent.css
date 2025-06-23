@@ -650,13 +650,13 @@ text-align: left;
   color: var(--primarycolor);
 }
 
-.divider h2 {
+.home-divider h2 {
   font-size: var(--mainheadfont);
   margin-bottom: 5px;
   color: var(--primarycolor);
 }
 
-.divider p {
+.home-divider p {
   font-size: var(--parafont);
   margin-bottom: 30px;
   color: var(--primarycolor);
