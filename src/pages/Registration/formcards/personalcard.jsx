@@ -1,24 +1,88 @@
 
 import "./formcard.css";
 
-const Personalcard = () => {
+
+const Personalcard = ({ formData, setFormData }) => {
+
+const deiOptions = [
+  { key: "woman", label: "Woman" },
+  { key: "bipoc", label: "BIPOC" },
+  { key: "disability", label: "Person with disability" },
+  { key: "caregiver", label: "Caregiver" },
+  { key: "veteran", label: "Veteran" },
+  { key: "lgbtq", label: "LGBTQ+" }
+];
+
+
+ const handleChange = (e) => {
+  const { name, type, checked } = e.target;
+
+  if (type === "checkbox" && name.startsWith("dei_")) {
+    const value = name.replace("dei_", ""); // extract just 'woman', 'bipoc', etc.
+
+    setFormData((prev) => {
+      const currentList = prev.personal.deiIdentities || [];
+
+      return {
+        ...prev,
+        personal: {
+          ...prev.personal,
+          deiIdentities: checked
+            ? [...currentList, value] // add to list
+            : currentList.filter((item) => item !== value) // remove from list
+        }
+      };
+    });
+  } else {
+    // regular input handling
+    const { value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      personal: {
+        ...prev.personal,
+        [name]: value
+      }
+    }));
+  }
+};
+
+
   return (
     <div className="registration-form-container">
       <h2>Personal & Identity Details</h2>
       <form className="registration-form">
         <div className="form-row">
            
-          <input type="text" id="firstname" placeholder="First name" />
-          <input type="text" placeholder="Last name" />
+          <input  type="text"
+            name="firstName"
+            placeholder="First name"
+            value={formData.personal.firstName || ""}
+            onChange={handleChange} />
+          <input  type="text"
+            name="lastName"
+            placeholder="Last name"
+            value={formData.personal.lastName || ""}
+            onChange={handleChange} />
         </div>
 
         <div className="form-row">
-          <input type="email" placeholder="Email Address" />
-          <input type="tel" placeholder="Phone Number" />
+          <input  type="email"
+            name="email"
+            placeholder="Email Address"
+            value={formData.personal.email || ""}
+            onChange={handleChange} />
+          <input type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.personal.phone || ""}
+            onChange={handleChange} />
         </div>
 
         <div className="form-row">
-          <select>
+          <select             name="gender"
+            value={formData.personal.gender || ""}
+            onChange={handleChange}
+>
             <option value="">Select gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -29,21 +93,30 @@ const Personalcard = () => {
      
         <div className="form-row">
   <label className="switch">
-    <input type="checkbox" />
+    <input type="checkbox"
+              name="careerBreak"
+              checked={formData.personal.careerBreak || false}
+              onChange={handleChange} />
     <span className="slider"></span>
   </label>
   <span>I’ve taken a career break of 6+ months</span>
 </div>
 
         <div className="form-row">
-          <select>
+          <select  name="country"
+            value={formData.personal.country || ""}
+            onChange={handleChange}>
             <option value="">Country</option>
             <option value="IN">India</option>
             <option value="US">United States</option>
             <option value="UK">United Kingdom</option>
             {/* Add more countries here */}
           </select>
-          <input type="text" placeholder="" />
+          <input  type="text"
+            name="city"
+            placeholder="City"
+            value={formData.personal.city || ""}
+            onChange={handleChange} />
         </div>
 
         <div className="form-row dei-info">
@@ -51,14 +124,21 @@ const Personalcard = () => {
           <small>Select all that apply. This information helps us connect you with inclusive opportunities.</small>
         </div>
 
-        <div className="form-row checkbox-grid">
-          <label><input type="checkbox" /> Woman</label>
-          <label><input type="checkbox" /> BIPOC</label>
-          <label><input type="checkbox" /> Person with disability</label>
-          <label><input type="checkbox" /> Caregiver</label>
-          <label><input type="checkbox" /> Veteran</label>
-          <label><input type="checkbox" /> LGBTQ+</label>
-        </div>
+       <div className="form-row checkbox-grid">
+  {deiOptions.map((option) => (
+    <label key={option.key}>
+      <input
+        type="checkbox"
+        name={`dei_${option.key}`}
+        checked={
+          formData.personal.deiIdentities?.includes(option.key) || false
+        }
+        onChange={handleChange}
+      />
+      {option.label}
+    </label>
+  ))}
+</div>
       </form>
     </div>
   );

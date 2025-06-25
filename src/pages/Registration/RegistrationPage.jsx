@@ -25,6 +25,14 @@ function RegistrationPage() {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
+  const [formData, setFormData] = useState({
+  personal: {},
+
+  availability: {},
+  portfolio: {}
+});
+  const Backendurl=process.env.REACT_APP_BACKEND_URL
+console.log(formData,"formData")
 
   const handleNext = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -42,9 +50,34 @@ function RegistrationPage() {
     }
   };
 
-  const handleSubmit=()=>{
-setShowPopup(true)
+
+const handleSubmit = async () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  try {
+    const response = await fetch(`${Backendurl}/api/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    const data = await response.json();
+
+console.log(data,"response");
+
+    if (response.ok) {
+      setShowPopup(true);
+    } else {
+      alert("Failed to submit registration.");
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("An error occurred.");
   }
+};
+
+
   const handleClose=()=>{
 setShowPopup(false)
 navigate("/")
@@ -86,7 +119,7 @@ navigate("/")
           </div>
         </div>
 
-        <div className="register-form-content">{renderStepContent(currentStep)}</div>
+        <div className="register-form-content">{renderStepContent(currentStep,formData, setFormData)}</div>
 
         <div className="register-button-group">
           {currentStep > 0 && (
@@ -127,20 +160,20 @@ navigate("/")
   );
 }
 
-function renderStepContent(step) {
+function renderStepContent(step,formData, setFormData) {
   switch (step) {
     case 0:
-      return <Personalcard />;
+      return <Personalcard formData={formData} setFormData={setFormData}/>;
     case 1:
-      return <ProfessionalBackgroundCard />;
+      return <ProfessionalBackgroundCard formData={formData} setFormData={setFormData} />;
     case 2:
-      return <WorkTrackPreferences />;
+      return <WorkTrackPreferences formData={formData} setFormData={setFormData} />;
     case 3:
-      return <AvailabilityResources />;
+      return <AvailabilityResources formData={formData} setFormData={setFormData} />;
     case 4:
-      return <PortfolioWorkSamples />;
+      return <PortfolioWorkSamples formData={formData} setFormData={setFormData} />;
     case 5:
-      return <AlmostDone />;
+      return <AlmostDone formData={formData} setFormData={setFormData} />;
     default:
       return null;
   }

@@ -1,9 +1,8 @@
+
+
 import { useState } from "react";
 
-
-export default function WorkTrackPreferences() {
-  const [experience, setExperience] = useState("");
-
+export default function WorkTrackPreferences({ formData, setFormData }) {
   const workTracks = [
     {
       id: "dei",
@@ -38,6 +37,34 @@ export default function WorkTrackPreferences() {
     { value: "executive", label: "Executive (10+ years)" },
   ];
 
+  const handleTrackChange = (trackId) => {
+    const current = formData.preferences?.workTracks || [];
+    const updatedTracks = current.includes(trackId)
+      ? current.filter((t) => t !== trackId)
+      : [...current, trackId];
+
+    setFormData((prev) => ({
+      ...prev,
+      preferences: {
+        ...prev.preferences,
+        workTracks: updatedTracks,
+      },
+    }));
+  };
+
+  const handleExperienceChange = (value) => {
+    setFormData((prev) => ({
+      ...prev,
+      preferences: {
+        ...prev.preferences,
+        experience: value,
+      },
+    }));
+  };
+
+  const selectedTracks = formData.preferences?.workTracks || [];
+  const selectedExperience = formData.preferences?.experience || "";
+
   return (
     <div className="preferences-container">
       <h2>Work Track Preferences</h2>
@@ -48,7 +75,11 @@ export default function WorkTrackPreferences() {
       <div className="work-tracks">
         {workTracks.map((track) => (
           <label key={track.id} className="work-track">
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              checked={selectedTracks.includes(track.id)}
+              onChange={() => handleTrackChange(track.id)}
+            />
             <div>
               <strong>{track.title}</strong>
               <p>{track.description}</p>
@@ -63,14 +94,15 @@ export default function WorkTrackPreferences() {
           <label
             key={exp.value}
             className={`experience-option ${
-              experience === exp.value ? "selected" : ""
+              selectedExperience === exp.value ? "selected" : ""
             }`}
           >
             <input
               type="radio"
               name="experience"
               value={exp.value}
-              onChange={() => setExperience(exp.value)}
+              checked={selectedExperience === exp.value}
+              onChange={() => handleExperienceChange(exp.value)}
             />
             {exp.label}
           </label>

@@ -1,19 +1,52 @@
-import React, { useState } from "react";
+
+
+import React from "react";
 import "./formcard.css";
 
-export default function AlmostDone() {
-  const [joinCommunity, setJoinCommunity] = useState(false);
-  const [preferences, setPreferences] = useState({
-    jobMatches: false,
-    training: false,
-    events: false,
-    news: false,
-  });
-  const [agreeTerms, setAgreeTerms] = useState(false);
+export default function AlmostDone({ formData, setFormData }) {
+  const almostDone = formData.almostDone || {
+    joinCommunity: false,
+    preferences: {
+      jobMatches: false,
+      training: false,
+      events: false,
+      news: false,
+    },
+    agreeTerms: false,
+  };
 
   const handlePreferenceChange = (e) => {
     const { name, checked } = e.target;
-    setPreferences((prev) => ({ ...prev, [name]: checked }));
+    setFormData((prev) => ({
+      ...prev,
+      almostDone: {
+        ...almostDone,
+        preferences: {
+          ...almostDone.preferences,
+          [name]: checked,
+        },
+      },
+    }));
+  };
+
+  const handleToggleCommunity = () => {
+    setFormData((prev) => ({
+      ...prev,
+      almostDone: {
+        ...almostDone,
+        joinCommunity: !almostDone.joinCommunity,
+      },
+    }));
+  };
+
+  const handleAgreeTerms = () => {
+    setFormData((prev) => ({
+      ...prev,
+      almostDone: {
+        ...almostDone,
+        agreeTerms: !almostDone.agreeTerms,
+      },
+    }));
   };
 
   return (
@@ -26,8 +59,8 @@ export default function AlmostDone() {
         <label className="toggle-switch">
           <input
             type="checkbox"
-            checked={joinCommunity}
-            onChange={() => setJoinCommunity(!joinCommunity)}
+            checked={almostDone.joinCommunity}
+            onChange={handleToggleCommunity}
           />
           <span className="slider round"></span>
         </label>
@@ -40,42 +73,20 @@ export default function AlmostDone() {
       <div className="field-block">
         <label className="field-label">Notification Preferences</label>
         <div className="checkbox-group">
-          <label>
-            <input
-              type="checkbox"
-              name="jobMatches"
-              checked={preferences.jobMatches}
-              onChange={handlePreferenceChange}
-            />
-            Job matches based on my profile
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="training"
-              checked={preferences.training}
-              onChange={handlePreferenceChange}
-            />
-            Training opportunities and skill development
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="events"
-              checked={preferences.events}
-              onChange={handlePreferenceChange}
-            />
-            Community events and networking
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="news"
-              checked={preferences.news}
-              onChange={handlePreferenceChange}
-            />
-            Industry news and updates
-          </label>
+          {["jobMatches", "training", "events", "news"].map((pref) => (
+            <label key={pref}>
+              <input
+                type="checkbox"
+                name={pref}
+                checked={almostDone.preferences[pref]}
+                onChange={handlePreferenceChange}
+              />
+              {pref === "jobMatches" && "Job matches based on my profile"}
+              {pref === "training" && "Training opportunities and skill development"}
+              {pref === "events" && "Community events and networking"}
+              {pref === "news" && "Industry news and updates"}
+            </label>
+          ))}
         </div>
       </div>
 
@@ -95,8 +106,8 @@ export default function AlmostDone() {
         <label>
           <input
             type="checkbox"
-            checked={agreeTerms}
-            onChange={() => setAgreeTerms(!agreeTerms)}
+            checked={almostDone.agreeTerms}
+            onChange={handleAgreeTerms}
           />
           I agree to the <a href="#">Teams and services</a> and <a href="#">Privacy Policy</a>
         </label>
