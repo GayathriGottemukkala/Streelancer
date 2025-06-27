@@ -9,6 +9,8 @@
   --smallbg:#FFF7F2;
   --lightpurcolor:#5C0090;
 
+  --heading: clamp(0.6rem, 2.5vw, 5rem);
+  --mainparafont:clamp(3px, 0.9vw, 1.3rem);
   --mainheadfont: clamp(1.2rem, 2.5vw, 2rem);
   --subheadfont: clamp(0.9rem, 2vw, 1.3rem);
   --parafont: clamp(0.85rem, 1.8vw, 1.1rem);

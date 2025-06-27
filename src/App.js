@@ -8,6 +8,7 @@ import LoginPage from "./pages/Auth/LoginPage";
 
 import Signup from "./pages/Auth/Signup";
 import RegistrationPage from "./pages/Registration/RegistrationPage";
+import GlobalFlex from "./pages/Globalflex/globalflex";
 
 
 
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/login" element={<LoginPage/>} />
           <Route path="/Registration" element={<RegistrationPage/>} />
+          <Route path="/GlobalFlex" element={<GlobalFlex/>} />
       </Routes>
     </Router>
   );

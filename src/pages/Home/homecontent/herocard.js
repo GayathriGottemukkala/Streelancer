@@ -1,8 +1,14 @@
 
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function ServiceCard({ title, subtitle, points, mainImage, altText, className  ,customStyle}) {
+function ServiceCard({ title, subtitle, points, mainImage, altText, className  ,customStyle,navigateTo}) {
+  const navigate =useNavigate()
+  const handleNavigate=()=>{
+   
+   navigate(navigateTo)
+  }
   return (
     <div className={`service-card ${className || ''}`}>
       <h3>{title} –</h3>
@@ -14,7 +20,7 @@ function ServiceCard({ title, subtitle, points, mainImage, altText, className  ,
       </ul>
      
        
-        <button className="learn-button" style={customStyle||{}}>Learn More</button>
+        <button className="learn-button" style={customStyle||{}}  onClick={handleNavigate}>Learn More</button>
         <img src={mainImage} className="card-img img-fluid" alt={altText} />
       </div>
       

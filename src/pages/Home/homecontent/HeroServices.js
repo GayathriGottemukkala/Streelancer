@@ -30,7 +30,7 @@ function HeroServices() {
       
           mainImage={img1}
           
-       
+       navigateTo="/Academy"
           altText="Academy"
         />
 
@@ -44,7 +44,7 @@ function HeroServices() {
           ]}
           
            mainImage={img2}
-      
+      navigateTo="/GlobalFlex"
           altText="Marketplace"
         />
         <ServiceCard
@@ -57,10 +57,10 @@ function HeroServices() {
           ]}
           
            mainImage={img3}
-       
+       navigateTo="/DEITalent"
           altText="Marketplace"
         />
-       <ServiceCard
+       {/* <ServiceCard
           title="Remote Woman"
           className="bluecard"
           subtitle="Workforce."
@@ -73,7 +73,7 @@ function HeroServices() {
           
           altText="Academy"
           customStyle={{ marginTop: "40px" }} 
-        />
+        /> */}
       </div>
     </section>
   );

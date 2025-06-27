@@ -4,20 +4,21 @@
 
 
 
-.services-grid {
-  display: grid;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    /* gap: 20px; */
-    padding: 1rem 5rem;
-    grid-template-columns: 35% 35%;
-    /* margin: 10px;*/
-}
-
 
 /* herocard  */
 
 /* ServiceCard.css */
+.services-grid {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* gap: 20px; */
+    padding: 1rem 4rem;
+    
+    /* margin: 10px;*/
+}
+
+
 .bluecard{
 background-color: var(--primarycolor);
 border-bottom-right-radius: 30px;
@@ -55,7 +56,7 @@ border-top-left-radius: 30px; ul{
   overflow: hidden;
   max-width: 26rem;
   margin: 10px;
-
+    width: clamp(299px, 74%, 393px);
 }
 
 .service-card h3 {
@@ -87,12 +88,16 @@ border-top-left-radius: 30px; ul{
   cursor: pointer;
   width:134px;
   height:28px;
+  position: relative;
+   z-index: 10;
 }
 .card-img{
       width: 404px;
     position: absolute;
     right: 0;
     bottom: 0;
+     z-index: 1;
+  pointer-events: none;
 }
 
 
@@ -103,19 +108,26 @@ border-top-left-radius: 30px; ul{
    
 }
 }
+@media screen and (max-width:1090px) {
+  .services-grid{
+    padding: 0px;
+  }
+}
+
 @media screen and (max-width:891px) {
 
   .card-img{
-      width: 320px;
+      width: 250px;
    
 }
 .service-card ul {margin-bottom: 120px;}
 .learn-button {width:124px;}
 
+
 }
 
 @media screen and (max-width:891px) {
-.service-card {max-width: 17rem;}
+
   .card-img{
       width: 250px;
    
@@ -782,13 +794,13 @@ background-color: #d07c5d;
     background-repeat: no-repeat;
     background-position: center;
 } */
-@media (max-width: 1300px) {
+/* @media (max-width: 1300px) {
     .services-grid{
       grid-template-columns: 50% 50%;
       padding: 2rem 2rem;
         justify-items: center;
     }
-}
+} */
 /* Responsive */
 @media (max-width: 768px) {
   .steps-grid,
@@ -824,13 +836,13 @@ background-color: #d07c5d;
 }
 
 
-@media screen and (max-width:800px) {
+/* @media screen and (max-width:800px) {
   .services-grid {
     padding: 0px 0px;
     grid-template-columns: 1fr;
   }
   
-}
+} */
 
 
 
