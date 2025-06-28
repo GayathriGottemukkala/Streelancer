@@ -19,20 +19,7 @@ function HeroServices() {
 
       <div className="services-grid">
        
-        <ServiceCard
-          title="Academy"
-          className="bluecard"
-          subtitle="Learn New Skills"
-          points={[
-            "Industry-relevant courses for women, queer professionals, returnees, and the silver generation.",
-            "Hands-on learning, live mentorship, real-world projects, and certifications."
-          ]}
-      
-          mainImage={img1}
-          
-       navigateTo="/Academy"
-          altText="Academy"
-        />
+
 
         <ServiceCard
           title="Global"
@@ -59,6 +46,20 @@ function HeroServices() {
            mainImage={img3}
        navigateTo="/DEITalent"
           altText="Marketplace"
+        />
+                <ServiceCard
+          title="Academy"
+          className="bluecard"
+          subtitle="Learn New Skills"
+          points={[
+            "Industry-relevant courses for women, queer professionals, returnees, and the silver generation.",
+            "Hands-on learning, live mentorship, real-world projects, and certifications."
+          ]}
+      
+          mainImage={img1}
+          
+       navigateTo="/Academy"
+          altText="Academy"
         />
        {/* <ServiceCard
           title="Remote Woman"

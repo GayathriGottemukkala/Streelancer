@@ -6,7 +6,7 @@ const ContactForm = () => {
 
   return (
     <div className="contact-wrapper">
-      <div className="header">
+      <div className="global-header">
         <h2>Ready to Build Your Global Team?</h2>
         <p>
           Connect with our team to discuss your global talent needs and discover how our flexible
@@ -14,13 +14,13 @@ const ContactForm = () => {
         </p>
       </div>
 
-      <div className="form-box">
+      <div className="global-formbox">
         <h3>Contact Us</h3>
-        <form>
+        <form className='global-form'>
           <label htmlFor="company">Company Name</label>
           <input type="text" id="company" />
 
-          <div className="form-row">
+          <div className="global-formrow">
             <div>
               <label htmlFor="name">Your Name</label>
               <input type="text" id="name" />
@@ -47,7 +47,7 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div className="form-row">
+          <div className="global-formrow">
             <div>
               <label htmlFor="workModel">Preferred Work Model</label>
               <select id="workModel">

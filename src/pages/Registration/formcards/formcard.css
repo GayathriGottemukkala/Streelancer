@@ -113,6 +113,8 @@
   align-items: center;
   gap: 6px;
   font-size: 0.9rem;
+  font-weight: normal;
+      accent-color: #4b2e83;
 }
 
 
@@ -155,6 +157,7 @@ font-weight: bold;
   background: transparent;
   cursor: pointer;
   gap: 0.75rem;
+      accent-color: #4b2e83;
 }
 
 .work-track input[type="checkbox"] {
@@ -189,6 +192,7 @@ font-size: var(--smallparafont);
 
 .experience-option input {
   margin-right: 8px;
+      accent-color: #4b2e83;
 }
 
 .experience-option.selected {
@@ -283,6 +287,7 @@ font-size: var(--smallparafont);
 
 .checkbox-option input[type="checkbox"] {
   accent-color: #4b2e83;
+  flex: 0;
 }
 
 
@@ -501,6 +506,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   gap: 18px;
+      accent-color: #4b2e83;
 }
 
 
@@ -522,7 +528,7 @@ input:checked + .slider:before {
 }
 
 .terms-block {
-  
+      accent-color: #4b2e83;
   color: #4b2e83;
 }
 

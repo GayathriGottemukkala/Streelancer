@@ -119,6 +119,7 @@ border-radius: 4px;
   background-color: transparent;
   color:  var(--textcolor);
   border: 1px solid  var(--primarycolor);
+     white-space: nowrap;
 }
 
 /* ===== HERO SECTION ===== */

@@ -27,7 +27,7 @@ function RegistrationPage() {
   const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
   personal: {},
-
+ professional: {},
   availability: {},
   portfolio: {}
 });

@@ -14,28 +14,37 @@ const deiOptions = [
 ];
 
 
- const handleChange = (e) => {
-  const { name, type, checked } = e.target;
+const handleChange = (e) => {
+  const { name, type, checked, value } = e.target;
 
+  // For DEI checkboxes
   if (type === "checkbox" && name.startsWith("dei_")) {
-    const value = name.replace("dei_", ""); // extract just 'woman', 'bipoc', etc.
-
+    const identity = name.replace("dei_", "");
     setFormData((prev) => {
       const currentList = prev.personal.deiIdentities || [];
-
       return {
         ...prev,
         personal: {
           ...prev.personal,
           deiIdentities: checked
-            ? [...currentList, value] // add to list
-            : currentList.filter((item) => item !== value) // remove from list
+            ? [...currentList, identity]
+            : currentList.filter((item) => item !== identity)
         }
       };
     });
-  } else {
-    // regular input handling
-    const { value } = e.target;
+  } 
+  // For regular checkboxes like 'careerBreak'
+  else if (type === "checkbox") {
+    setFormData((prev) => ({
+      ...prev,
+      personal: {
+        ...prev.personal,
+        [name]: checked
+      }
+    }));
+  } 
+  // For text, email, select, etc.
+  else {
     setFormData((prev) => ({
       ...prev,
       personal: {

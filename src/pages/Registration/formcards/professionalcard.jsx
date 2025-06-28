@@ -112,9 +112,9 @@ const ProfessionalBackgroundCard = ({ formData, setFormData }) => {
             Select all industries you have experience in (up to 3)
           </small>
         </div>
-        <div className="checkbox-grid form-row">
+        <div className="checkbox-grid">
           {industries.map((industry) => (
-            <label key={industry} className="form-checkbox">
+            <label key={industry} className="checkbox-option">
               <input
                 type="checkbox"
                 checked={
@@ -134,9 +134,9 @@ const ProfessionalBackgroundCard = ({ formData, setFormData }) => {
             Select tools and platforms you’re familiar with
           </small>
         </div>
-        <div className="checkbox-grid form-row">
+        <div className="checkbox-grid">
           {skills.map((skill) => (
-            <label key={skill} className="form-checkbox">
+            <label key={skill} className="checkbox-option">
               <input
                 type="checkbox"
                 checked={

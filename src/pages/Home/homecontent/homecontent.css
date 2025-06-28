@@ -135,7 +135,9 @@ border-top-left-radius: 30px; ul{
 .service-card ul {margin-bottom: 145px;}
 .learn-button {width:82px;
 position: absolute;
-bottom:4px;}
+bottom:4px;
+        margin-bottom: 13px;
+    }
 .hero-services{
   padding:50px 0px ;
 }
@@ -232,6 +234,7 @@ font-size: 14px;
   cursor: pointer;
   font-weight: bold;
   margin-top: 20px;
+
 }
 
 /* ✅ Large screens (between tablet & desktop) */
@@ -353,7 +356,7 @@ font-size: 14px;
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  flex: 1;
+
   gap: 20px;
 }
 
